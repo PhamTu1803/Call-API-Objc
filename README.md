@@ -3,7 +3,7 @@
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
 
 MVVMDemo Call API with Objective-C
-  You can call API with liblary and see demo paradigm MVVM
+You can call API with liblary and see demo paradigm MVVM
 
 
 ## Screenshot
