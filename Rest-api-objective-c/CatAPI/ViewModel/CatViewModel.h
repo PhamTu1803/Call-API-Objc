@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CatViewModel : NSObject
 
 @property(nonatomic,strong) NSMutableArray *animalArr;
-@property (copy) void (^reloadTable)(void);
+@property(nonatomic,copy) void (^reloadTable)(void);
+-(id) init ;
 -(void) fetchCouseUsingJSON ;
 - (NSUInteger)numberOfInSection:(NSInteger)section;
 - (NSString *)cellForRowAt:(NSIndexPath *)indexPath;

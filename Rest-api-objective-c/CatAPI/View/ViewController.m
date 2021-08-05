@@ -35,12 +35,13 @@
 -(void)bindViewModel {
     self.viewModel = [[CatViewModel alloc] init];
     __weak ViewController *weakSelf = self;
-    [weakSelf.viewModel fetchCouseUsingJSON];
-    [weakSelf.catTableView reloadData];
+  
     weakSelf.viewModel.reloadTable = ^{
         [weakSelf.catTableView reloadData];
-        };
-   
+    };
+    [weakSelf.viewModel fetchCouseUsingJSON];
+    [weakSelf.catTableView reloadData];
+
 }
 #pragma mark - UITableViewDataSource
 
@@ -56,8 +57,8 @@
     NSString *catstring = [self.viewModel cellForRowAt:indexPath] ;
     cell.imgcat.image = [UIImage imageNamed:[self.viewModel cellForRowAt:indexPath]];
     [cell.imgcat sd_setImageWithURL:[NSURL URLWithString:catstring]
-                 placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
-
+                   placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    
     return cell;
 }
 
